@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-details',
@@ -6,11 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./details.page.scss'],
   standalone: false
 })
-export class DetailsPage implements OnInit {
+export class DetailsPage  {
 
-  constructor() { }
+  constructor(private navCtrl: NavController) {}
 
-  ngOnInit() {
+  goBack() {
+    this.navCtrl.navigateBack('/catalog');
   }
-
 }
