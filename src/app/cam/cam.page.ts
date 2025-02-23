@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-cam',
@@ -6,11 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cam.page.scss'],
   standalone: false
 })
-export class CamPage implements OnInit {
+export class CamPage  {
 
-  constructor() { }
+  constructor(private navCtrl: NavController) {}
 
-  ngOnInit() {
+
+  goBack() {
+    this.navCtrl.navigateBack('/home');
   }
-
 }
