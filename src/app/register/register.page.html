@@ -1,13 +1,34 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>register</ion-title>
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-title>Registrarse</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">register</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding">
+  <div class="register-container">
+    <ion-card>
+      <ion-card-content>
+        <!-- Logo Pokémon -->
+        <div class="logo-container">
+          <img src="https://www.pngall.com/wp-content/uploads/13/Pokemon-Logo-PNG-Clipart.png" alt="Pokémon Logo">
+        </div>
+
+        <!-- Campos de entrada -->
+        <ion-input class="custom-input" placeholder="Nombre"></ion-input>
+        <ion-input class="custom-input" placeholder="Correo"></ion-input>
+        <ion-input class="custom-input" placeholder="Username"></ion-input>
+        <ion-input class="custom-input" placeholder="Password" type="password"></ion-input>
+        <ion-input class="custom-input" placeholder="Confirmar Password" type="password"></ion-input>
+
+        <!-- Botones -->
+        <ion-button expand="full" class="btn-register" (click)="register()">Registrarse</ion-button>
+        <ion-button expand="full" class="btn-login" fill="outline" (click)="goToLogin()">Volver al Login</ion-button>
+      </ion-card-content>
+    </ion-card>
+
+    <!-- Imagen decorativa (Poké Ball) -->
+    <div class="image-container">
+      <img src="https://icon-library.com/images/pokemon-icon-file/pokemon-icon-file-4.jpg" alt="Poké Ball">
+    </div>
+  </div>
 </ion-content>

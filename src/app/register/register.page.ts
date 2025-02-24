@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-register',
@@ -8,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterPage implements OnInit {
 
-  constructor() { }
+  constructor(private navCtrl: NavController) {}
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  register() {
+    console.log('Registro exitoso');
+    this.navCtrl.navigateForward('/home');
   }
 
+  goToLogin() {
+    this.navCtrl.navigateBack('/login');
+  }
 }
