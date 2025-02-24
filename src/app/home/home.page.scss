@@ -1,10 +1,10 @@
 // Paleta Pokémon 🎨
-$pokemon-yellow: #ffcb05;
-$pokemon-red: #d32f2f;
-$pokemon-blue: #1976d2;
-$dark-gray: #2c2c2c;
+$pokemon-yellow: #FFCB05;
+$pokemon-red: #D32F2F;
+$pokemon-blue: #1976D2;
+$dark-gray: #2C2C2C;
 
-.register-container {
+.home-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12,6 +12,13 @@ $dark-gray: #2c2c2c;
   height: 100%;
   background: linear-gradient(to bottom, $pokemon-yellow, $pokemon-blue);
   padding: 20px;
+}
+
+ion-header {
+  ion-toolbar {
+    background-color: $pokemon-red !important;
+    color: white;
+  }
 }
 
 .profile-card {
@@ -60,7 +67,6 @@ $dark-gray: #2c2c2c;
 
 .btn-card {
   text-align: center;
-  background-color: white;
   border-radius: 15px;
   padding: 15px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
@@ -71,7 +77,8 @@ $dark-gray: #2c2c2c;
 }
 
 .btn-card:nth-child(1) {
-  border-left: 5px solid $pokemon-blue;
+  border-left: 50px solid $pokemon-blue;
+  border-right: 50px solid $pokemon-blue;
   color: $pokemon-blue;
 }
 
