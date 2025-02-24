@@ -7,11 +7,11 @@ $dark-gray: #2C2C2C;
 .home-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start; // Asegura que los elementos estén más arriba
   align-items: center;
   height: 100%;
   background: linear-gradient(to bottom, $pokemon-yellow, $pokemon-blue);
-  padding: 20px;
+  padding: 10px; // Se redujo el padding general
 }
 
 ion-header {
@@ -25,21 +25,22 @@ ion-header {
   width: 90%;
   max-width: 400px;
   text-align: center;
-  padding: 20px;
+  padding: 15px; // Reducido de 20px a 15px para menor altura
   background-color: white;
   border-radius: 20px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  margin-top: 10px; // Se reduce la separación con el header
 }
 
 .profile-header {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 10px; // Se redujo el gap entre la imagen y la info
 }
 
 .image-container img {
-  width: 100px;
-  height: 100px;
+  width: 90px; // Se redujo un poco la imagen
+  height: 90px;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -62,38 +63,38 @@ ion-header {
 .button-container {
   width: 90%;
   max-width: 400px;
-  margin-top: 20px;
+  margin-top: 10px; // Se redujo la separación con la tarjeta
 }
 
 .btn-card {
   text-align: center;
   border-radius: 15px;
-  padding: 15px;
+  padding: 12px; // Se redujo el padding de los botones
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  font-size: 18px;
+  font-size: 16px; // Se redujo un poco el tamaño de la fuente
   font-weight: bold;
-  margin-bottom: 15px;
+  margin-bottom: 10px; // Menos separación entre botones
   cursor: pointer;
 }
 
 .btn-card:nth-child(1) {
-  border-left: 50px solid $pokemon-blue;
-  border-right: 50px solid $pokemon-blue;
+  border-left: 40px solid $pokemon-blue; // Se redujo el grosor del borde
+  border-right: 40px solid $pokemon-blue;
   color: $pokemon-blue;
 }
 
 .btn-card:nth-child(2) {
-  border-left: 5px solid $pokemon-yellow;
+  border-left: 4px solid $pokemon-yellow;
   color: $dark-gray;
 }
 
 .logout {
-  border-left: 5px solid $pokemon-red;
+  border-left: 4px solid $pokemon-red;
   color: $pokemon-red;
 }
 
 // Botón flotante Pokébola
 .pokeball-button img {
-  width: 60px;
+  width: 55px; // Se redujo ligeramente el tamaño
   height: auto;
 }
