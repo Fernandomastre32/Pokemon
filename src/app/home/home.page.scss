@@ -84,20 +84,22 @@ ion-header {
 }
 
 .btn-card:nth-child(2) {
-  border-left: 4px solid $pokemon-yellow;
+  border-left: 40px solid $pokemon-yellow;
+  border-right: 40px solid $pokemon-yellow;
   color: $dark-gray;
 }
 
 .logout {
-  border-left: 4px solid $pokemon-red;
+  border-left: 40px solid $pokemon-red;
+  border-right: 40px solid $pokemon-red;
   color: $pokemon-red;
+}
+ion-fab {
+  bottom: 100px !important; // Ajusta la altura del botón (puedes cambiar este valor)
 }
 
 // Botón flotante Pokébola
 .pokeball-button img {
-  width: 55px; // Se redujo ligeramente el tamaño
+  width: 80px; // Se redujo ligeramente el tamaño
   height: auto;
-}
-.ion-fab  {
-  bottom: 80px !important; // Se aumentó la distancia al bottom
 }

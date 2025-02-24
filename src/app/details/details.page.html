@@ -1,8 +1,28 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>Details</ion-title>
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+      <ion-button (click)="goBack()">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Detalles de {{ pokemon.name }}</ion-title>
   </ion-toolbar>
 </ion-header>
-<ion-content>
-  <ion-button expand="full" (click)="goBack()">Back</ion-button>
+
+<ion-content class="home-container">
+  <div class="details-container">
+    <ion-card class="profile-card" [ngStyle]="{'border-color': getPokemonColor(pokemon.type)}">
+      <div class="profile-header">
+        <div class="image-container">
+          <img [src]="pokemon.image" alt="{{ pokemon.name }}" />
+        </div>
+        <div class="profile-info">
+          <h2>{{ pokemon.name }}</h2>
+          <p>Tipo: {{ pokemon.type }}</p>
+        </div>
+      </div>
+    </ion-card>
+    
+    <ion-button expand="full" fill="outline" (click)="goBack()">Regresar</ion-button>
+  </div>
 </ion-content>

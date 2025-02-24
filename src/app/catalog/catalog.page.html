@@ -1,9 +1,43 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>Catalog</ion-title>
+  <ion-toolbar color="danger">
+    <ion-title>Catálogo Pokémon</ion-title>
   </ion-toolbar>
 </ion-header>
-<ion-content>
-  <ion-button expand="full" (click)="goToDetails()">Go to Details</ion-button>
-  <ion-button expand="full" (click)="goBack()">Back</ion-button>
+
+<ion-content class="ion-padding">
+  <div class="home-container">
+    
+    <!-- Tarjetas de Pokémon -->
+    <ion-card 
+      *ngFor="let pokemon of pokemons; let i = index" 
+      class="profile-card"
+      [ngStyle]="{'border-color': getPokemonColor(pokemon.type)}"
+    >
+      <div class="profile-header">
+        <div class="image-container">
+          <img [src]="pokemon.image" alt="Imagen de Pokémon" />
+        </div>
+        <div class="profile-info">
+          <h2>{{ pokemon.name }}</h2>
+          <p>Tipo: {{ pokemon.type }}</p>
+          <p>Habilidad: {{ pokemon.ability }}</p>
+          <p>Región: {{ pokemon.region }}</p>
+        </div>
+      </div>
+      
+      <ion-card-content>
+        <ion-button expand="full" (click)="goToDetails(i)">
+          <ion-icon name="eye"></ion-icon> Ver Detalles
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
+
+    <!-- Botón para agregar Pokémon -->
+    <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+      <ion-fab-button class="pokeball-button" (click)="addPokemon()">
+        <ion-icon name="add-circle"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+
+  </div>
 </ion-content>
