@@ -1,9 +1,36 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Home</ion-title>
-  </ion-toolbar>
-</ion-header>
-<ion-content>
-  <ion-button expand="full" (click)="goToCam()">Go to Cam</ion-button>
-  <ion-button expand="full" (click)="goToCatalog()">Go to Catalog</ion-button>
+<ion-content class="register-container">
+  <ion-card class="profile-card">
+    <div class="profile-header">
+      <div class="image-container">
+        <img src="assets/profile.png" alt="Entrenador Pokémon" />
+      </div>
+      <div class="profile-info">
+        <h2>Entrenador Ash</h2>
+        <p>ash Ketchum</p>
+        <p>Edad: 10</p>
+        <p>Pueblo Paleta</p>
+      </div>
+    </div>
+  </ion-card>
+
+  <div class="button-container">
+    <ion-card class="btn-card" (click)="goToCatalog()">
+      <ion-card-content>📖 Catálogo</ion-card-content>
+    </ion-card>
+    
+    <ion-card class="btn-card" (click)="goToDetails()">
+      <ion-card-content>🔍 Detalles</ion-card-content>
+    </ion-card>
+    
+    <ion-card class="btn-card logout" (click)="logout()">
+      <ion-card-content>🚪 Cerrar Sesión</ion-card-content>
+    </ion-card>
+  </div>
+
+  <!-- Botón flotante de la Pokébola -->
+  <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+    <ion-fab-button class="pokeball-button" (click)="openCamera()">
+      <img src="assets/pokeball.png" alt="Abrir Cámara" />
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>
