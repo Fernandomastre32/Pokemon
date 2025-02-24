@@ -1,7 +1,58 @@
-ion-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
+// Colores de Pokémon 🎨
+$pokemon-yellow: #FFCB05;
+$pokemon-red: #D32F2F;
+$pokemon-blue: #1976D2;
+$dark-gray: #2C2C2C;
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background: linear-gradient(to bottom, $pokemon-yellow, $pokemon-blue);
+}
+
+ion-card {
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  padding: 20px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.logo-container img {
+  width: 150px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.custom-input {
+  border: 2px solid $pokemon-blue;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: white;
+}
+
+.btn-login {
+  background-color: $pokemon-red;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+.btn-register {
+  color: $pokemon-blue;
+  border-color: $pokemon-blue;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+.image-container img {
+  width: 100px;
+  margin-top: 20px;
+  filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.2));
+}

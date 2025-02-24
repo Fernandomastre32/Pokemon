@@ -1,10 +1,31 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>Login</ion-title>
+  <ion-toolbar color="danger">
+    <ion-title>Pokémon Login</ion-title>
   </ion-toolbar>
 </ion-header>
-<ion-content>
-  <ion-input placeholder="Username"></ion-input>
-  <ion-input placeholder="Password" type="password"></ion-input>
-  <ion-button expand="full" (click)="goToHome()">Login</ion-button>
+
+<ion-content class="ion-padding">
+  <div class="login-container">
+    <ion-card>
+      <ion-card-content>
+        <!-- Logo Pokémon -->
+        <div class="logo-container">
+          <img src="assets/pokemon-logo.png" alt="Pokémon Logo">
+        </div>
+
+        <!-- Campos de entrada -->
+        <ion-input class="custom-input" placeholder="Username"></ion-input>
+        <ion-input class="custom-input" placeholder="Password" type="password"></ion-input>
+
+        <!-- Botones -->
+        <ion-button expand="full" class="btn-login" (click)="goToHome()">Login</ion-button>
+        <ion-button expand="full" class="btn-register" fill="outline" (click)="goToRegister()">Registrarse</ion-button>
+      </ion-card-content>
+    </ion-card>
+
+    <!-- Imagen decorativa (Poké Ball) -->
+    <div class="image-container">
+      <img src="assets/pokeball.png" alt="Poké Ball">
+    </div>
+  </div>
 </ion-content>

@@ -8,17 +8,15 @@ import { NavController } from '@ionic/angular';
   standalone: false
 })
 export class LoginPage implements OnInit {
-
   constructor(private navCtrl: NavController) {}
 
-  ngOnInit() {
-  }
- 
-    
-  
-    goToHome() {
-      this.navCtrl.navigateForward('/home');
-    }
-  }
-  
+  ngOnInit() {}
 
+  goToHome() {
+    this.navCtrl.navigateForward('/home');
+  }
+
+  goToRegister() {
+    this.navCtrl.navigateForward('/register');
+  }
+}
